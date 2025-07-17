@@ -181,4 +181,62 @@ var getName2 = function () {
 > [!NOTE]
 > This type of function is also stored as a variable in EC.
 
-## Functions in JavaScript
+## Functions
+
+```javaScript
+var x = 1;
+
+a();
+b();
+console.log(x); //Just to see what is printed
+
+function a() {
+   var x = 10;
+   console.log(x);
+}
+
+function b() {
+   var x = 100;
+   console.log(x);
+}
+
+```
+__Output:__ <br />
+<img width="474" height="141" alt="image" src="https://github.com/user-attachments/assets/bad07a28-a121-4a69-ab97-2a3079209658" />
+
+## How Execution Context will work here
+
+Let's first place in the Memory Component, <br />
+<img width="712" height="390" alt="image" src="https://github.com/user-attachments/assets/3d48d9fe-ebe6-4de4-b215-bd0315dc30ec" />
+
+> [!NOTE]
+> The first phase, Memory Component, is also called the 'Variable Environment'.
+
+Now, the value of x will be replaced by 1, and secondly, since the function is invoked, a new stack will be added to call stack and also a new independent EC will be created inside the Global EC.
+
+<img width="941" height="382" alt="image" src="https://github.com/user-attachments/assets/fce39164-9c3a-4b2a-adac-6078d35e32b8" />
+
+> [!NOTE]
+> Always before using a variable it will look for the value of the variable inside the scope of that specific fuction first!
+
+Since, the execution of the a() function is complete it will be removed from the call stack and at the same time it will also be removed from the main Execution Context (EC). 
+
+<img width="943" height="481" alt="image" src="https://github.com/user-attachments/assets/b2e4bcdd-4dfa-4519-a967-24abdb06c2b0" />
+Again, since the execution of over for the second function as well, it will pop out of the call stack and as well as the main EC. Lastly the control of will move forward to line number 4 from 3 to console.log(x).
+
+<img width="943" height="481" alt="image" src="https://github.com/user-attachments/assets/ad09d4dc-f456-4be0-b65c-5ef5773845c3" />
+
+__Output__ <br />
+
+```bash
+> 10
+> 100
+> 1
+```
+After all the executions are done the enire thing will be removed.
+
+## Window & this-keyword
+
+## Acknowledgement
+
+[@Akshay Saini](https://www.youtube.com/@akshaymarch7)
