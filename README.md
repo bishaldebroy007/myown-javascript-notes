@@ -22,9 +22,9 @@ This happens in 2 phases. Such as <br>
    var square2 = square(n);
    var square4 = square(4);
    ```
-<br />
+
 > [!NOTE]
-> ***In this case, 'n' inside the square function is called an argument, and 'num' inside the square(num) is called a parameter.***
+> In this case, 'n' inside the square function is called an argument, and 'num' inside the square(num) is called a parameter.
    
    For variable invocation like this, another **Execution Context** will be created inside the first one.
    
@@ -166,7 +166,7 @@ var getName = () => {
 __Output on console:__
 
 ```bash
-> err: undefined
+> undefined
 > undefined
 ```
 > [!TIP]
