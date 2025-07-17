@@ -39,8 +39,12 @@ Just like before, the variable inside the function, called 'ans' and 'num' is st
 <img width="790" height="420" alt="image" src="https://github.com/user-attachments/assets/a2f80550-1de6-47d4-a938-18ee04b42e68" />
 
 <img width="790" height="420" alt="image" src="https://github.com/user-attachments/assets/ec23b419-8736-4bc4-b6d5-69f4ddbd52f6" />
+<br />
 
-***Note: the return in a function means that it returns the value to the position where the function was invoked.***
+> [!IMPORTANT]
+> ***The return in a function means that it returns the value to the position where the function was invoked.***
+
+
    ```JavaScript
    var square2 = square(n);
    ```
@@ -69,8 +73,8 @@ For this case,
 **Other Fancy names for Call stack:**
 <img width="1068" height="547" alt="image" src="https://github.com/user-attachments/assets/916203e3-f93d-4117-ad57-5e83adab6cc3" />
 
-
-***Call Stack maintains the order of execution of execution contexts***
+> [!NOTE]
+> ***Call Stack maintains the order of execution of execution contexts***
 
 ## Hoisting
-
+ 
