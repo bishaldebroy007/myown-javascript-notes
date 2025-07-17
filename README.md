@@ -3,7 +3,9 @@
 Everything in JS happens inside an **Execution Context**.
 
 <img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/621bcb18-0d5d-41a5-930b-195000d05fce" />
-One more fundamental concept is that, JS is a 
+One more fundamental concept is that JS is a synchronous single-threaded language. Single-threaded means it can execute one code at a time, and "Synchronous single-threaded" means it executes one code at a time and also in a specific order.
+
+
 
 ## Var, Let, Const:
 - The var keyword was used in all JavaScript code from 1995 to 2015 (it is not used now).
