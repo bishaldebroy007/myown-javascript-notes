@@ -4,7 +4,7 @@ Everything in JS happens inside an **Execution Context**.
 
 <img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/621bcb18-0d5d-41a5-930b-195000d05fce" />
 
-One more fundamental concept is that JS is a synchronous single-threaded language. Single-threaded means it can execute one code at a time, and "Synchronous single-threaded" means it executes one code at a time and also in a specific order.
+One more fundamental concept is that JS is a synchronous, single-threaded language. Single-threaded means it can execute one code at a time, and "Synchronous single-threaded" means it executes one code at a time and also in a specific order.
 
 ## What happens when a JS code is run?
 When a JS code is run, an Execution Context is created.
@@ -78,13 +78,13 @@ For this case,
 > ***Call Stack maintains the order of execution of execution contexts***
 
 ## Hoisting
-To directly dive into Hoisting, let's see some examples to get a better understanding of the situation here,  
+To directly dive into Hoisting, let's see some examples to get a better understanding of the situation here.  
 
 ### Visualizing the situation:
 
 __First Case Code:__
 
-```javaScript
+```JavaScript
 var x = 7;
 
 function getName() {
@@ -104,7 +104,7 @@ __Output on console:__
 
 __Second Case Code:__
 
-```javaScript
+```JavaScript
 getName();
 console.log(x);
 
@@ -131,7 +131,7 @@ This might look initially, but that's how JavaScript works, and the reason behin
 > ```
 
 ### Visualizing more scenarios:
-```javaScript
+```JavaScript
 getName();
 console.log(x);
 console.log(getName);
@@ -150,7 +150,7 @@ __Output on console:__
 > undefined
 ```
 
-```javaScript
+```JavaScript
 getName();
 console.log(x);
 console.log(getName);
@@ -183,7 +183,7 @@ var getName2 = function () {
 
 ## Functions
 
-```javaScript
+```JavaScript
 var x = 1;
 
 a();
@@ -212,17 +212,17 @@ Let's first place in the Memory Component, <br />
 > [!NOTE]
 > The first phase, Memory Component, is also called the 'Variable Environment'.
 
-Now, the value of x will be replaced by 1, and secondly, since the function is invoked, a new stack will be added to call stack and also a new independent EC will be created inside the Global EC.
+Now, the value of x will be replaced by 1, and secondly, since the function is invoked, a new stack will be added to the call stack, and also a new independent EC will be created inside the Global EC.
 
 <img width="941" height="382" alt="image" src="https://github.com/user-attachments/assets/fce39164-9c3a-4b2a-adac-6078d35e32b8" />
 
 > [!NOTE]
-> Always before using a variable it will look for the value of the variable inside the scope of that specific fuction first!
+> Always, before using a variable, it will look for the value of the variable inside the scope of that specific function first!
 
-Since, the execution of the a() function is complete it will be removed from the call stack and at the same time it will also be removed from the main Execution Context (EC). 
+Since the execution of the a() function is complete, it will be removed from the call stack and at the same time it will also be removed from the main Execution Context (EC). 
 
 <img width="943" height="481" alt="image" src="https://github.com/user-attachments/assets/b2e4bcdd-4dfa-4519-a967-24abdb06c2b0" />
-Again, since the execution of over for the second function as well, it will pop out of the call stack and as well as the main EC. Lastly the control of will move forward to line number 4 from 3 to console.log(x).
+Again, since the execution of over for the second function as well, it will pop out of the call stack and the main EC. Lastly, the control will move forward to line number 4 from 3 to console.log(x).
 
 <img width="943" height="481" alt="image" src="https://github.com/user-attachments/assets/ad09d4dc-f456-4be0-b65c-5ef5773845c3" />
 
@@ -233,9 +233,56 @@ __Output__ <br />
 > 100
 > 1
 ```
-After all the executions are done the enire thing will be removed.
+After all the executions are done, the entire thing will be removed.
 
 ## Window & this-keyword
+
+The shortest program in JavaScript is a blank JavaScript file.
+
+**What is a window?** <br />
+Ans: A window is like a global object, and it is created along with the global execution context. This means each time a JavaScript program is run a global object is created, an execution context is created, and 'this' is created.
+
+Even if a JavaScript file is empty, the global object will be created automatically.
+So, at  the global level,
+
+```JavaScript
+this === window
+> true
+```
+
+**What is global space?**<br />
+Ans: 
+
+```JavaScript
+var a = 10; //Global space
+
+function b() {   // Global space
+
+}
+
+function c() {
+   var x = 10; // x is not in the global space
+}
+
+
+```
+
+Now we know that anything that is in the global space will automatically get into the global object/window. For instance,
+
+```JavaScript
+var a = 30;
+function c() {
+   var x = 10;
+}
+
+console.log(window.a);
+//or,
+console.log(this.a);
+//or,
+console.log(a);
+```
+
+
 
 ## Acknowledgement
 
