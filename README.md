@@ -311,8 +311,87 @@ console.log(x);
 > JavaScript is known as a loosely-typed or weakly-typed language, since its data type can be dynamically changed, unlike C or C++
 
 # The Scope Chain, Scope & Lexical Environment
+Let's discuss some cases, <br />
+Case 1
+```JavaScript
+function a() {
+   console.log(b);
+}
+var b = 10;
+a(); //invoking the function
+```
+***Output:***
+```bash
+> 10
+```
+Case 2
+```JavaScript
+function a() {
+   c(); //invoking the function c.
+   function c() {
+      console.log(b);
+   }
+}
+var b = 10;
+a(); //invoking the function a.
+```
+***Output:***
+```bash
+> 10
+```
+Case 3
+```JavaScript
+function a() {
+   var b = 10;
+
+   c(); //invoking the function c.
+   function c() {
+      console.log(b);
+   }
+}
+a(); //invoking the function a.
+```
+***Output:***
+```bash
+> 10
+```
+So, we can see, it can still access the value.
+But,
+Case 3
+```JavaScript
+function a() {
+   var b = 10;
+}
+a(); //invoking the function a.
+console.log(b);
+```
+***Output:***
+```bash
+> ReferenceError: b is not defined.
+```
+
+**Easiest Definition of Scope:** Where a particular variable can be found is called the scope of that variable. For example, where is the scope of a variable called 'b'? Answer: It is inside the 'a()' scope.
+
+## Lexical Environment
+Whenever a Global Execution is created, a Lexical Environment is also created along with it. It is the local memory along with the lexical environment of its parent.
+Now, the question is, **what is Lexical?** <br />
+Answer to the question, 'Lexical' means hierarchy. For instance, the c() is lexically sitting inside the a(), and the a() is lexically sitting inside the global scope.
+```JavaScript
+function a() {
+   var b = 10;
+
+   c(); //invoking the function c.
+   function c() {
+      
+   }
+}
+a(); //invoking the function a.
+console.log(b);
+```
+<br />
+<img width="754" height="663" alt="image" src="https://github.com/user-attachments/assets/3a9bee77-b4f2-4c14-97dd-a888d33e61c9" />
 
 
-## Acknowledgement
+# Acknowledgement
 
 [@Akshay Saini](https://www.youtube.com/@akshaymarch7)
