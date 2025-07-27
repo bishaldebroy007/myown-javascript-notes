@@ -267,7 +267,7 @@ function c() {
 
 ```
 
-Now we know that anything that is in the global space will automatically get into the global object/window. For instance,
+Now we know that anything in the global space will automatically get into the global object/window. For instance,
 
 ```JavaScript
 var a = 30;
@@ -286,14 +286,31 @@ So, "Undefined" and "Not Defined" might sound the same, but it is not. <br />
 **Undefined:** Consider it like a special placeholder that holds a certain space in the memory for the time being until any other value is assigned.
 
 ```JavaScript
-console.log(a);
 var a = 2;
-// or
-// console.log(a);
+console.log(a);
 ```
 ```bash
 > a: 2
 ```
+```JavaScript
+console.log(a);
+var a = 2;
+
+```
+```bash
+> a: Undefined
+```
+On the other hand, "Not Defined" means a variable that is not declared yet but is used.
+```JavaScript
+console.log(x);
+```
+```bash
+> Not Defined.
+```
+> [!NOTE]
+> JavaScript is known as a loosely-typed or weakly-typed language, since its data type can be dynamically changed, unlike C or C++
+
+# The Scope Chain, Scope & Lexical Environment
 
 
 ## Acknowledgement
