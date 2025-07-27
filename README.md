@@ -281,7 +281,19 @@ console.log(this.a);
 //or,
 console.log(a);
 ```
+# Undefined vs Not Defined
+So, "Undefined" and "Not Defined" might sound the same, but it is not. <br />
+**Undefined:** Consider it like a special placeholder that holds a certain space in the memory for the time being until any other value is assigned.
 
+```JavaScript
+console.log(a);
+var a = 2;
+// or
+// console.log(a);
+```
+```bash
+> a: 2
+```
 
 
 ## Acknowledgement
