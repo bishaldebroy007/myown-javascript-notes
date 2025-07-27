@@ -281,7 +281,7 @@ console.log(this.a);
 //or,
 console.log(a);
 ```
-# Undefined vs Not Defined
+## Undefined vs Not Defined
 So, "Undefined" and "Not Defined" might sound the same, but it is not. <br />
 **Undefined:** Consider it like a special placeholder that holds a certain space in the memory for the time being until any other value is assigned.
 
@@ -310,7 +310,7 @@ console.log(x);
 > [!NOTE]
 > JavaScript is known as a loosely-typed or weakly-typed language, since its data type can be dynamically changed, unlike C or C++
 
-# The Scope Chain, Scope & Lexical Environment
+## The Scope Chain, Scope & Lexical Environment
 Let's discuss some cases, <br />
 Case 1
 ```JavaScript
@@ -372,7 +372,7 @@ console.log(b);
 
 **Easiest Definition of Scope:** Where a particular variable can be found is called the scope of that variable. For example, where is the scope of a variable called 'b'? Answer: It is inside the 'a()' scope.
 
-## Lexical Environment
+### Lexical Environment
 Whenever a Global Execution is created, a Lexical Environment is also created along with it. It is the local memory along with the lexical environment of its parent.
 Now, the question is, **what is Lexical?** <br />
 Answer to the question, 'Lexical' means hierarchy. For instance, the c() is lexically sitting inside the a(), and the a() is lexically sitting inside the global scope.
@@ -392,6 +392,6 @@ console.log(b);
 <img width="754" height="663" alt="image" src="https://github.com/user-attachments/assets/3a9bee77-b4f2-4c14-97dd-a888d33e61c9" />
 
 
-# Acknowledgement
+## Acknowledgement
 
 [@Akshay Saini](https://www.youtube.com/@akshaymarch7)
