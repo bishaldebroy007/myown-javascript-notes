@@ -392,8 +392,35 @@ console.log(b);
 <img width="754" height="663" alt="image" src="https://github.com/user-attachments/assets/3a9bee77-b4f2-4c14-97dd-a888d33e61c9" />
 
 ## Let & Const | Temporal Dead Zone
-
 let & const declarations are hoisted in JavaScript. <br />
+But, yes, they are managed differently in 'var' compared to let & const. <br />
+Here,
+```JavaScript
+console.log(b);
+var b = 100;
+```
+Output:
+```bash
+> 100
+```
+```JavaScript
+console.log(a);
+let a = 10;
+```
+Output:
+```bash
+> Uncaught ReferenceError: Cannot access 'a' before initialization.
+```
+But, if I try to
+```JavaScript
+let a = 10;
+console.log(a);
+```
+It will work just fine. Why is that? <br />
+This happens because 'let' & 'const' are assigned memory just like 'var', which is called hoisting. But in the case of 'var', the memory is allocated in the global, and in the  case of 'let' & 'const', the memory is allocated somewhere else where it cannot be excess before declaration or putting some value in them.
+
+**Temporal Dead Zone:** It is the time since when the 'let' variable was hoisted and till it was initialized with some value. The time in between is called the Temporal Dead Zone.
+
 
 
 
