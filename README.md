@@ -419,8 +419,9 @@ console.log(a);
 It will work just fine. Why is that? <br />
 This happens because 'let' & 'const' are assigned memory just like 'var', which is called hoisting. But in the case of 'var', the memory is allocated in the global, and in the  case of 'let' & 'const', the memory is allocated somewhere else where it cannot be excess before declaration or putting some value in them.
 
-**Temporal Dead Zone:** It is the time since when the 'let' variable was hoisted and till it was initialized with some value. The time in between is called the Temporal Dead Zone.
+**Temporal Dead Zone:** It is the time since when the 'let' variable was hoisted till it was initialized with some value. The time in between is called the Temporal Dead Zone.
 
+## Block Scope & Shadowing
 
 
 
