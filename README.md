@@ -4,7 +4,7 @@ Everything in JS happens inside an **Execution Context**.
 
 <img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/621bcb18-0d5d-41a5-930b-195000d05fce" />
 
-One more fundamental concept is that JS is a synchronous, single-threaded language. Single-threaded means it can execute one code at a time, and "Synchronous single-threaded" means it executes one code at a time and also in a specific order.
+One more fundamental concept is that JS is a synchronous, single-threaded language. Single-threaded means it can execute one code at a time, and "Synchronous single-threaded" means executing one code at a time and in a specific order.
 
 ## What happens when a JS code is run?
 When a JS code is run, an Execution Context is created.
@@ -12,7 +12,7 @@ This happens in 2 phases. Such as <br>
 1. Memory Creation:
    <img width="790" height="420" alt="image" src="https://github.com/user-attachments/assets/808b625b-432e-4558-b2b4-b2c6cdb7cbfc" />
 
-   In the first phase, first, all the variables are stored with a value 'undefined' initially. Such as, n, square2, square4.  If it is a function, the function body will be saved along with the function. Such as the square function in this case.
+   In the first phase, all the variables are stored with a value 'undefined' initially, such as n, square2, and square4. If it is a function, the function body will be saved along with the function, such as the square function in this case.
 
 2. Code Execution Phase:
    Now, in the second phase, the undefined values stored within the values will be replaced by the actual values in this phase. Besides, the function will remain untouched in this phase for now.
@@ -34,7 +34,7 @@ This time, it will only be concerned with the body code inside the function; in 
 
 <img width="790" height="420" alt="image" src="https://github.com/user-attachments/assets/fca5475d-09cd-44f9-af6f-383b3aea2203" />
 
-Just like before, the variable inside the function, called 'ans' and 'num' is stored in the memory section with a value of 'undefined' initially.
+Just like before, the variable inside the function, called 'ans' and 'num', is stored in the memory section with a value of 'undefined' initially.
 
 <img width="790" height="420" alt="image" src="https://github.com/user-attachments/assets/10cd8f88-b640-4d9b-8d8c-e278039b1d83" />
 
@@ -240,7 +240,7 @@ After all the executions are done, the entire thing will be removed.
 The shortest program in JavaScript is a blank JavaScript file.
 
 **What is a window?** <br />
-Ans: A window is like a global object, and it is created along with the global execution context. This means each time a JavaScript program is run a global object is created, an execution context is created, and 'this' is created.
+Ans: A window is like a global object, and it is created along with the global execution context. This means each time a JavaScript program is run, a global object is created, an execution context is created, and 'this' is created.
 
 Even if a JavaScript file is empty, the global object will be created automatically.
 So, at  the global level,
@@ -390,6 +390,11 @@ console.log(b);
 ```
 <br />
 <img width="754" height="663" alt="image" src="https://github.com/user-attachments/assets/3a9bee77-b4f2-4c14-97dd-a888d33e61c9" />
+
+## Let & Const | Temporal Dead Zone
+
+let & const declarations are hoisted in JavaScript. <br />
+
 
 
 ## Acknowledgement
