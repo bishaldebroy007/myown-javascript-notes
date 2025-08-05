@@ -422,6 +422,71 @@ This happens because 'let' & 'const' are assigned memory just like 'var', which 
 **Temporal Dead Zone:** It is the time since when the 'let' variable was hoisted till it was initialized with some value. The time in between is called the Temporal Dead Zone.
 
 ## Block Scope & Shadowing
+**Block in JS:** <br />
+```JavaScript
+{
+   //Compound Statement
+}
+```
+This is a perfectly valid code or block in JavaScript, which does nothing. It is also called "Compound Statement". It is used to put multiple JS statements into one group. For instance, <br />
+```JavaScript
+{
+   //Compound Statement
+   var a = 10;
+   console.log(a);
+}
+```
+Why do we need to put them in such a group? So that wherever JS expects only one statement, we can send it as a single statement within a group. <br />
+For example,
+```JavaScript
+if (true) {
+   //Compound Statement
+   var a = 10;
+   console.log(a);
+}
+```
+
+**Block Scope in JS:** <br />
+It means, whatever variables & functions are inside a block, we can access.
+```JavaScript
+var a = 10;  // inside Global Scope
+let b = 11; // Inside a seperate memory
+const c = 12; // Inside a seperate memory
+```
+<img width="566" height="494" alt="image" src="https://github.com/user-attachments/assets/895fa6ff-30db-459b-a717-6851fd28911a" />
+
+This is why it is said that 'let' & 'const' are block-scoped. <br />
+>[!Note]
+> let & const are never accessible outside of the block. Although the 'var' is accessible outside the block scope since it is in the global scope.
+
+**Shadowing in JS:** <br />
+<img width="927" height="462" alt="image" src="https://github.com/user-attachments/assets/fca7c5d0-8f3a-4309-a97f-da0b079b6f57" />
+Here, we can see the output of a is 10, not 100. This implies that the 'var a = 10' inside the block scope shadows the 'var a = 100' outside the block and keeps the second value of a, which is 10. <br />
+
+Even if we place another console.log(a) outside of the block, we will see that the value will still be 10. Because the 'var a = 10' inside the block is replacing or shadowing the value outside, because they both are pointing towards the same memory location.
+<img width="907" height="403" alt="image" src="https://github.com/user-attachments/assets/03f3f47b-4a0b-4bc3-ad4c-8ef7e096c6d0" />
+
+Although unlike 'ver', 'Let' works in a slightly different way,
+<img width="915" height="341" alt="image" src="https://github.com/user-attachments/assets/806c14c5-492c-4c2f-9beb-f508de8ba45d" />
+The value of b is 100, this time because the value inside the block is limited to its block scope, and the one outside is only getting access to the value that is outside, 100. <br />
+Let's see how it works in functions,
+<img width="924" height="358" alt="image" src="https://github.com/user-attachments/assets/d9b53231-2d0a-4490-83d4-150b15682672" />
+
+**Illegal Shadowing:**
+<img width="924" height="358" alt="image" src="https://github.com/user-attachments/assets/91cf8a99-a66b-4ff5-9f71-fedd2a506518" />
+
+But this second case is perfectly valid,
+<img width="924" height="358" alt="image" src="https://github.com/user-attachments/assets/73379da9-01d4-4e57-80a0-b5fdba9c7ab4" />
+
+Remember these cases too,
+<img width="965" height="376" alt="image" src="https://github.com/user-attachments/assets/c71ee05e-75f3-47de-8559-af20304dace2" />
+<img width="965" height="376" alt="image" src="https://github.com/user-attachments/assets/430719b7-d7a9-4fd4-bf37-c236cfc2e5db" />
+
+## Clouseres
+
+
+
+
 
 
 
